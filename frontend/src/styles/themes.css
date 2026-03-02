@@ -1,0 +1,194 @@
+/* RED, BLACK and FIRE Theme Styles */
+:root {
+  --primary-red: #FF0000;
+  --dark-black: #000000;
+  --fire-orange: #FF4500;
+  --light-red: #ff3333;
+  --darker-black: #111111;
+  --text-light: #ffffff;
+  --text-gray: #cccccc;
+  --gold: #FFD700;
+  --silver: #C0C0C0;
+  --bronze: #CD7F32;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, var(--dark-black) 0%, #220000 100%);
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fire Glow Effects */
+.fire-glow {
+  position: relative;
+  box-shadow: 
+    0 0 10px var(--primary-red),
+    0 0 20px var(--fire-orange),
+    0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.fire-glow:hover {
+  box-shadow: 
+    0 0 15px var(--primary-red),
+    0 0 30px var(--fire-orange),
+    0 0 45px rgba(255, 0, 0, 0.7);
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary-red);
+  color: white;
+  border: 2px solid var(--fire-orange);
+}
+
+.btn-primary:hover {
+  background: var(--fire-orange);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--primary-red);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* Card Styles */
+.card {
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--primary-red);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--fire-orange);
+}
+
+.card-title {
+  color: var(--primary-red);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-upcoming {
+  background: var(--fire-orange);
+  color: white;
+}
+
+.status-completed {
+  background: var(--primary-red);
+  color: white;
+}
+
+.status-winner {
+  background: var(--gold);
+  color: var(--dark-black);
+}
+
+.status-runner-up {
+  background: var(--silver);
+  color: var(--dark-black);
+}
+
+.status-participated {
+  background: var(--text-gray);
+  color: var(--dark-black);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-red);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-fire {
+  color: var(--fire-orange);
+  text-shadow: 1px 1px 2px var(--primary-red);
+}
+
+.text-glow {
+  text-shadow: 
+    0 0 5px var(--primary-red),
+    0 0 10px var(--fire-orange);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px 0;
+  }
+  
+  .card {
+    padding: 15px;
+    margin: 5px;
+  }
+}

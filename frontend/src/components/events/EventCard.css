@@ -1,0 +1,25 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.event-title {
+  color: var(--fire-orange);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.event-details p {
+  margin: 0.5rem 0;
+}
+
+.event-status {
+  margin-top: auto;
+  text-align: center;
+}

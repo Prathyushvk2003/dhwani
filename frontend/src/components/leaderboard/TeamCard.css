@@ -1,0 +1,71 @@
+.team-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid var(--primary-red);
+  transition: all 0.3s ease;
+}
+
+.team-card.first-place {
+  border-color: var(--gold);
+  background: linear-gradient(to right, rgba(255, 215, 0, 0.1), transparent);
+}
+
+.team-card.second-place {
+  border-color: var(--silver);
+  background: linear-gradient(to right, rgba(192, 192, 192, 0.1), transparent);
+}
+
+.team-card.third-place {
+  border-color: var(--bronze);
+  background: linear-gradient(to right, rgba(205, 127, 50, 0.1), transparent);
+}
+
+.team-card.other-place {
+  border-color: var(--primary-red);
+}
+
+.team-rank {
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+}
+
+.team-info {
+  flex: 1;
+  text-align: center;
+}
+
+.team-name {
+  margin: 0;
+  color: var(--fire-orange);
+  font-size: 1.5rem;
+}
+
+.team-points {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.team-rank-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  color: var(--fire-orange);
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .team-rank-number {
+    order: 4;
+  }
+}

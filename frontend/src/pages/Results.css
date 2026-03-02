@@ -1,0 +1,86 @@
+.results-page {
+  padding: 2rem 0;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-card {
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid var(--primary-red);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-event-name {
+  color: var(--fire-orange);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+.result-place-1st {
+  background: rgba(255, 215, 0, 0.2);
+  border-left: 4px solid var(--gold);
+}
+
+.result-place-2nd {
+  background: rgba(192, 192, 192, 0.2);
+  border-left: 4px solid var(--silver);
+}
+
+.result-place-3rd {
+  background: rgba(205, 127, 50, 0.2);
+  border-left: 4px solid var(--bronze);
+}
+
+.result-place-other {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--primary-red);
+}
+
+.result-position {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.result-student {
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+.result-team {
+  font-style: italic;
+  color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .result-student {
+    margin: 0.5rem 0;
+  }
+}
